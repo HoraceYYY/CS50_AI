@@ -192,7 +192,7 @@ class Implication(Sentence):
         return set.union(self.antecedent.symbols(), self.consequent.symbols())
 
 
-class Biconditicd onal(Sentence):
+class Biconditional(Sentence):
     def __init__(self, left, right):
         Sentence.validate(left)
         Sentence.validate(right)
