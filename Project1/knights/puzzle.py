@@ -28,9 +28,6 @@ And(Or(BKnight, BKnave), Not(And(BKnight, BKnave))),
 
 Implication(AKnight, And(AKnave,BKnave)),
 Implication(AKnave, Not(And(AKnave,BKnave))),
-
-
-
 )
 
 # Puzzle 2
