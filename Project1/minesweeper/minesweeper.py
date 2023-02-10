@@ -17,12 +17,12 @@ class Minesweeper():
         # Initialize an empty field with no mines
         self.board = []
         for i in range(self.height):
-            row = []
+            row = [] 
             for j in range(self.width):
                 row.append(False)
             self.board.append(row)
 
-        # Add mines randomly
+        # Add mines randomly; self.mine is a 2d array with location of mine in self.board. Self.board uses true value to represent mine
         while len(self.mines) != mines:
             i = random.randrange(height)
             j = random.randrange(width)
