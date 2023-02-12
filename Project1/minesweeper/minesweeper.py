@@ -108,7 +108,7 @@ class Sentence():
         if len(self.cells) == self.count:
             return (self.cells)
 
-        raise NotImplementedError
+        #raise NotImplementedError
 
     def known_safes(self):
         """
@@ -117,7 +117,7 @@ class Sentence():
         if self.count == 0:
             return self.cells
 
-        raise NotImplementedError
+        #raise NotImplementedError
 
     def mark_mine(self, cell):
         """
@@ -279,5 +279,9 @@ class MinesweeperAI():
                     if (row, column) not in self.mines:
                         possible_move.append((row, column))
         
-        return possible_move[0]
+        if len(possible_move) > 0:
+            random.shuffle(possible_move)
+            return possible_move[0]
+        else:
+            return None
         #raise NotImplementedError
