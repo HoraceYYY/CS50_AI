@@ -114,7 +114,7 @@ while True:
             pygame.draw.rect(screen, WHITE, rect, 3)
 
             # Add a mine, flag, or number if needed
-            if game.is_mine((i, j)) and lost:
+            if game.ls((i, j)) and lost:
                 screen.blit(mine, rect)
             elif (i, j) in flags:
                 screen.blit(flag, rect)
